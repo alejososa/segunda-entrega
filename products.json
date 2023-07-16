@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "title": "fernet",
+        "description": "aperitivo",
+        "price": 850,
+        "thumbnail": "no foto",
+        "code": "1234",
+        "stock": 1500
+    },
+    {
+        "id": 2,
+        "title": "coca",
+        "description": "gaseosa",
+        "price": 500,
+        "thumbnail": "no foto",
+        "code": "1235",
+        "stock": 1500
+    },
+    {
+        "id": 3,
+        "title": "hielo",
+        "description": "bolsa de hielo",
+        "price": 300,
+        "thumbnail": "no foto",
+        "code": "1236",
+        "stock": 1500
+    }
+]
