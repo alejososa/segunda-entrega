@@ -9,15 +9,6 @@
         "stock": 1500
     },
     {
-        "id": 2,
-        "title": "coca",
-        "description": "gaseosa",
-        "price": 500,
-        "thumbnail": "no foto",
-        "code": "1235",
-        "stock": 1500
-    },
-    {
         "id": 3,
         "title": "hielo",
         "description": "bolsa de hielo",
@@ -87,6 +78,15 @@
         "price": 80000,
         "thumbnail": "no foto",
         "code": "1245",
+        "stock": 500
+    },
+    {
+        "id": 11,
+        "title": "Coca",
+        "description": "gaseosa",
+        "price": 80000,
+        "thumbnail": "no foto",
+        "code": "12000",
         "stock": 500
     }
 ]

@@ -95,14 +95,14 @@ async function test() {
     
     // agrega el product con su nuevo id autoincrementable
 
-    await productManager.addProduct({
-        title: "Blue label",
-        description:"un elixir",
-        price: 80000,
-        thumbnail: "no foto",
-        code: "1245",
-        stock: 500,
-    });
+   // await productManager.addProduct({
+     //   title: "Blue label",
+       // description:"un elixir",
+        //price: 80000,
+        //thumbnail: "no foto",
+        //code: "1245",
+        //stock: 500,
+    //});
 
     //trae la lista de todos los products del archivo .json
     //const products = await productManager.getProducts();
