@@ -1,4 +1,4 @@
-const fs = require("fs");
+import fs from 'fs';
 const FILE_NAME = "products.json";
 
 class ProductManager {
@@ -91,18 +91,18 @@ class ProductManager {
 }
 
 const productManager = new ProductManager(FILE_NAME);
-//async function test() {
+async function test() {
     
     // agrega el product con su nuevo id autoincrementable
 
-    //await productManager.addProduct({
-    //    title: "hielo",
-    //    description:"bolsa de hielo",
-    //    price: 300,
-    //    thumbnail: "no foto",
-    //    code: "1236",
-    //    stock: 1500,
-    //});
+    await productManager.addProduct({
+        title: "Blue label",
+        description:"un elixir",
+        price: 80000,
+        thumbnail: "no foto",
+        code: "1245",
+        stock: 500,
+    });
 
     //trae la lista de todos los products del archivo .json
     //const products = await productManager.getProducts();
@@ -130,7 +130,7 @@ const productManager = new ProductManager(FILE_NAME);
     // if (!product) {
     //   console.log(`The product id: ${productId} does not exist`);
     // }
-//}
+}
 export default productManager;
 test();
 

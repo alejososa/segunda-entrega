@@ -25,5 +25,68 @@
         "thumbnail": "no foto",
         "code": "1236",
         "stock": 1500
+    },
+    {
+        "id": 4,
+        "title": "campari",
+        "description": "aperitivo",
+        "price": 450,
+        "thumbnail": "no foto",
+        "code": "1237",
+        "stock": 150
+    },
+    {
+        "id": 5,
+        "title": "Sprite",
+        "description": "gaseosa",
+        "price": 450,
+        "thumbnail": "no foto",
+        "code": "1238",
+        "stock": 500
+    },
+    {
+        "id": 6,
+        "title": "Vodka",
+        "description": "destilado",
+        "price": 1500,
+        "thumbnail": "no foto",
+        "code": "1239",
+        "stock": 500
+    },
+    {
+        "id": 7,
+        "title": "Baggio",
+        "description": "Jugo de naranja",
+        "price": 500,
+        "thumbnail": "no foto",
+        "code": "1240",
+        "stock": 500
+    },
+    {
+        "id": 8,
+        "title": "heineken lata",
+        "description": "Cerveza de lata",
+        "price": 500,
+        "thumbnail": "no foto",
+        "code": "1241",
+        "stock": 500
+    },
+    {
+        "id": 9,
+        "title": "heineken botella",
+        "description": "Cerveza en botella",
+        "price": 500,
+        "thumbnail": "no foto",
+        "code": "1244",
+        "stock": 500
+    },
+    {
+        "id": 10,
+        "title": "Blue label",
+        "description": "un elixir",
+        "price": 80000,
+        "thumbnail": "no foto",
+        "code": "1245",
+        "stock": 500
     }
 ]
