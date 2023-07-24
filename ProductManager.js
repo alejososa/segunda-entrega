@@ -28,14 +28,16 @@ class ProductManager {
 
             //confirmacion de los campos
             if (!title || !description || !price || !thumbnail || !code || !stock) {
-                console.log("Complete all fields");
-                return undefined;
+                //console.log("Complete all fields");
+                throw new error ("Complete all fields");
+                
             }
 
             //uso de codigo único
             if (products.find((product) => product.code === code)) {
-                console.log("The product code is already in use");
-                return undefined;
+                //console.log("The product code is already in use");
+                throw new error ("The product code is already in use");
+                
             }
 
             const product = { id, title, description, price, thumbnail, code, stock };
@@ -88,11 +90,12 @@ class ProductManager {
     }
 }
 
-async function test() {
-    const manager = new ProductManager(FILE_NAME);
+const productManager = new ProductManager(FILE_NAME);
+//async function test() {
+    
     // agrega el product con su nuevo id autoincrementable
 
-    //await manager.addProduct({
+    //await productManager.addProduct({
     //    title: "hielo",
     //    description:"bolsa de hielo",
     //    price: 300,
@@ -102,7 +105,7 @@ async function test() {
     //});
 
     //trae la lista de todos los products del archivo .json
-    //const products = await manager.getProducts();
+    //const products = await productManager.getProducts();
     //console.log(products);
 
     // trae el product con el id específico que se encuentra en el .json
@@ -115,17 +118,19 @@ async function test() {
     //}
 
     //borra un producto específico por su id
-    //await manager.deleteProduct(4);
+    //await productManager.deleteProduct(4);
 
     //actualiza un product ya sea completo o una propiedad escpecífica sin alterar su id
     //objeto a usar para el update
     // const productId = 1;
-    // const product = await manager.updateProduct(productId, {
+    // const product = await productManager.updateProduct(productId, {
     //   title: "manaos",
     //   stock: 16,
     // });
     // if (!product) {
     //   console.log(`The product id: ${productId} does not exist`);
     // }
-}
+//}
+export default productManager;
 test();
+
