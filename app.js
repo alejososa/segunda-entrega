@@ -14,7 +14,10 @@ app.use(express.urlencoded({extended: true}));
 app.get('/api/products', async (req, res)=>{
     try {
         const products = await productManager.getProducts()
-        res.status(200).json({message:"Products", products})
+
+        const limit= req.query.limit
+        const resLimit= products.slice(0,limit)
+        res.status(200).json({message:"Products", resLimit})
         
     } catch (error) {
         res.status(500).json({error})
@@ -23,7 +26,7 @@ app.get('/api/products', async (req, res)=>{
 
 //get
 app.get('/api/products/:productId', async (req, res)=>{
-    const {productId}= req.params 
+    const {productId}= req.params    
     try {
         const product= await productManager.getProductById(+productId)
         res.status(200).json({message:"product", product})
@@ -31,7 +34,11 @@ app.get('/api/products/:productId', async (req, res)=>{
         res.status(500).json({error})
     }
 })
-
+/*
+const limit= req.query.limit
+const resLimit= products.slice(0,limit)
+res.send({resLimit})
+*/
 //post
 app.post('/api/products', async (req, res)=>{
     try {
