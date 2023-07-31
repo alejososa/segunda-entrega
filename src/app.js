@@ -1,5 +1,7 @@
-import express, { response } from 'express';
-import productManager from './ProductManager.js'
+import express from 'express';
+import productRouter from './routes/products.router.js';
+import cartRouter from './routes/cart.router.js';
+
 
 
 
@@ -9,8 +11,21 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+
+
+
 //rutas
+
+app.use('/api/products', productRouter)    
+app.use('/api/carts', cartRouter)
 //get
+
+
+
+//-----------------product hasta probar-------------
+
+
+/*
 app.get('/api/products', async (req, res)=>{
     try {
         const products = await productManager.getProducts()
@@ -34,11 +49,7 @@ app.get('/api/products/:productId', async (req, res)=>{
         res.status(500).json({error})
     }
 })
-/*
-const limit= req.query.limit
-const resLimit= products.slice(0,limit)
-res.send({resLimit})
-*/
+
 //post
 app.post('/api/products', async (req, res)=>{
     try {
@@ -69,25 +80,11 @@ app.put('/api/products/:productId', async (req, res)=>{
         res.status(500).json({error})
     }
 })
-
-
-
-
-
-
-/* probando ando
-
-app.get('/saludo',(req, res)=>{
-    res.send("holis")
-})
-
-app.get('/despedida',(req, res)=>{
-    res.send("chau")
-})
 */
 
 
+const PORT= 8080
 
-app.listen(8080,() =>{
-    console.log("server on");
+app.listen(PORT,() =>{
+    console.log(`Escuchando el puerto ${PORT}`);
 })

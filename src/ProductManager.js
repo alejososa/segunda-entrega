@@ -5,42 +5,44 @@ class ProductManager {
     constructor(path) {
         this.path = path;
     }
+
+
     async getProducts() {
         try {
             if (fs.existsSync(this.path)) {
                 const products = await fs.promises.readFile(this.path, "utf-8");
                 return JSON.parse(products);
             } else {
-                return [];
+                fs.writeFileSync(FILE_NAME, '[]', 'utf-8');
             }
         } catch (error) {
             return error;
-        }
+        }//
     }
 
     async addProduct(product) {
-        const { title, description, price, thumbnail, code, stock } = product;
+        const { title, description, price, thumbnail, code, stock, category, status } = product;
         try {
             const products = await this.getProducts();
 
             // id generator
             let id = products[products.length - 1]?.id + 1 || 1;
-
+            let status = true;
             //confirmacion de los campos
-            if (!title || !description || !price || !thumbnail || !code || !stock) {
-                //console.log("Complete all fields");
-                throw new error ("Complete all fields");
+            if (!title || !description || !price || !thumbnail || !code || !stock || !category) {
+                
+                    return "Complete all fields";
                 
             }
 
             //uso de codigo único
             if (products.find((product) => product.code === code)) {
                 //console.log("The product code is already in use");
-                throw new error ("The product code is already in use");
+                return "The product code is already in use";
                 
             }
 
-            const product = { id, title, description, price, thumbnail, code, stock };
+            const product = { id, title, description, price, thumbnail, code, stock,category, status:true };
             products.push(product);
             await fs.promises.writeFile(this.path, JSON.stringify(products));
             return product;
@@ -95,14 +97,15 @@ async function test() {
     
     // agrega el product con su nuevo id autoincrementable
 
-   // await productManager.addProduct({
-     //   title: "Blue label",
-       // description:"un elixir",
-        //price: 80000,
-        //thumbnail: "no foto",
-        //code: "1245",
-        //stock: 500,
-    //});
+//    await productManager.addProduct({
+//        title: "coca",
+ //       description:"gaseosa",
+ //       price: 750,
+ //       thumbnail: "no foto",
+ //       code: "01",
+ //       stock: 500,
+ //       category:"bebida"
+ //   });
 
     //trae la lista de todos los products del archivo .json
     //const products = await productManager.getProducts();

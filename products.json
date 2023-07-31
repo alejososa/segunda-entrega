@@ -1,92 +1,112 @@
 [
     {
         "id": 1,
+        "title": "coca",
+        "description": "gaseosa",
+        "price": 750,
+        "thumbnail": "no foto",
+        "code": "01",
+        "stock": 500,
+        "category": "bebida",
+        "status": true
+    },
+    {
+        "id": 2,
         "title": "fernet",
         "description": "aperitivo",
-        "price": 850,
+        "price": 1750,
         "thumbnail": "no foto",
-        "code": "1234",
-        "stock": 1500
+        "code": "02",
+        "stock": 500,
+        "category": "bebida",
+        "status": true
     },
     {
         "id": 3,
         "title": "hielo",
-        "description": "bolsa de hielo",
-        "price": 300,
+        "description": "hielo",
+        "price": 1750,
         "thumbnail": "no foto",
-        "code": "1236",
-        "stock": 1500
+        "code": "03",
+        "stock": 500,
+        "category": "bebida",
+        "status": true
     },
     {
         "id": 4,
-        "title": "campari",
-        "description": "aperitivo",
-        "price": 450,
+        "title": "4",
+        "description": "algo",
+        "price": 1750,
         "thumbnail": "no foto",
-        "code": "1237",
-        "stock": 150
+        "code": "04",
+        "stock": 500,
+        "category": "bebida",
+        "status": true
     },
     {
         "id": 5,
-        "title": "Sprite",
-        "description": "gaseosa",
-        "price": 450,
+        "title": "5",
+        "description": "algo",
+        "price": 1750,
         "thumbnail": "no foto",
-        "code": "1238",
-        "stock": 500
+        "code": "05",
+        "stock": 500,
+        "category": "bebida",
+        "status": true
     },
     {
         "id": 6,
-        "title": "Vodka",
-        "description": "destilado",
-        "price": 1500,
+        "title": "6",
+        "description": "algo",
+        "price": 1750,
         "thumbnail": "no foto",
-        "code": "1239",
-        "stock": 500
+        "code": "06",
+        "stock": 500,
+        "category": "bebida",
+        "status": true
     },
     {
         "id": 7,
-        "title": "Baggio",
-        "description": "Jugo de naranja",
-        "price": 500,
+        "title": "7",
+        "description": "algo",
+        "price": 1750,
         "thumbnail": "no foto",
-        "code": "1240",
-        "stock": 500
+        "code": "07",
+        "stock": 500,
+        "category": "bebida",
+        "status": true
     },
     {
         "id": 8,
-        "title": "heineken lata",
-        "description": "Cerveza de lata",
-        "price": 500,
+        "title": "8",
+        "description": "algo",
+        "price": 1750,
         "thumbnail": "no foto",
-        "code": "1241",
-        "stock": 500
+        "code": "08",
+        "stock": 500,
+        "category": "bebida",
+        "status": true
     },
     {
         "id": 9,
-        "title": "heineken botella",
-        "description": "Cerveza en botella",
-        "price": 500,
+        "title": "9",
+        "description": "algo",
+        "price": 1750,
         "thumbnail": "no foto",
-        "code": "1244",
-        "stock": 500
+        "code": "09",
+        "stock": 500,
+        "category": "bebida",
+        "status": true
     },
     {
         "id": 10,
-        "title": "Blue label",
-        "description": "un elixir",
-        "price": 80000,
+        "title": "10",
+        "description": "algo",
+        "price": 1750,
         "thumbnail": "no foto",
-        "code": "1245",
-        "stock": 500
-    },
-    {
-        "id": 11,
-        "title": "Coca",
-        "description": "gaseosa",
-        "price": 80000,
-        "thumbnail": "no foto",
-        "code": "12000",
-        "stock": 500
+        "code": "10",
+        "stock": 500,
+        "category": "bebida",
+        "status": true
     }
 ]
